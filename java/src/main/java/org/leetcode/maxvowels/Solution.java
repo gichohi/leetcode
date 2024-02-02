@@ -30,11 +30,4 @@ public class Solution {
 
         return maxVowels;
     }
-
-
-    public static void main(String[] args) {
-        String word = "leetcode ";
-        int k = 3;
-        System.out.println(maxi(word, k));
-    }
 }
