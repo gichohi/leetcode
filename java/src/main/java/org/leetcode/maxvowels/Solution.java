@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Solution {
-    public int maxVowels(String s, int k) {
+    public static int maxVowels(String s, int k) {
         String vowels = "aeiou";
         int maxVowels = 0;
         int currentVowels = 0;
