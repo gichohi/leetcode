@@ -1,6 +1,6 @@
 import unittest
 
-from count_islands.countislands import Solution
+from count_islands.count_islands import Solution
 
 class TestSolution(unittest.TestCase):
     def test_numIslands(self):
