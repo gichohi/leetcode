@@ -1,7 +1,7 @@
 package org.leetcode.deletemiddlenode;
 
 public class Solution {
-    public static ListNode deleteMiddle(ListNode head) {
+    public ListNode deleteMiddle(ListNode head) {
         if(head == null || head.next == null){
             return null;
         }

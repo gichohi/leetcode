@@ -1,0 +1,4 @@
+package longestConsecutiveSequence
+
+class Soluion {
+}
