@@ -1,4 +1,4 @@
-package org.leetcode.deletemiddlenode;
+package org.leetcode.deleteMiddleNode;
 
 public class Solution {
     public ListNode deleteMiddle(ListNode head) {

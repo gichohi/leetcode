@@ -1,8 +1,8 @@
-package maxvowels;
+package maxVowels;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.leetcode.maxvowels.Solution;
+import org.leetcode.maxVowels.Solution;
 public class SolutionTests {
     @Test
     void testMaxVowels() {

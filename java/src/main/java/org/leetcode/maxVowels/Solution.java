@@ -1,7 +1,4 @@
-package org.leetcode.maxvowels;
-
-import java.util.Arrays;
-import java.util.List;
+package org.leetcode.maxVowels;
 
 public class Solution {
     public static int maxVowels(String s, int k) {

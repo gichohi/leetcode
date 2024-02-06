@@ -1,4 +1,4 @@
-package org.leetcode.longestuniquesubstring;
+package org.leetcode.longestUniqueSubstring;
 
 import java.util.HashMap;
 import java.util.Map;

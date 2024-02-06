@@ -1,8 +1,8 @@
-package threesum;
+package threeSum;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.leetcode.threesum.Solution;
+import org.leetcode.threeSum.Solution;
 
 import java.util.Arrays;
 import java.util.List;

@@ -1,4 +1,4 @@
-package org.leetcode.dailytemperatures;
+package org.leetcode.dailyTemperatures;
 
 import java.util.Stack;
 

@@ -1,8 +1,8 @@
-package dailytemperature;
+package dailyTemperatures;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.leetcode.dailytemperatures.Solution;
+import org.leetcode.dailyTemperatures.Solution;
 
 public class SolutionTests {
     @Test

@@ -1,8 +1,8 @@
-package longestuniquesubstring;
+package longestUniqueSubstring;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.leetcode.longestuniquesubstring.Solution;
+import org.leetcode.longestUniqueSubstring.Solution;
 
 public class SolutionTests {
 

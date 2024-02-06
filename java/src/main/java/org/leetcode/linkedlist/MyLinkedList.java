@@ -1,2 +1,4 @@
-package org.leetcode.linkedlist;public class MyLinkedList {
+package org.leetcode.linkedlist;
+
+public class MyLinkedList {
 }
