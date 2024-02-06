@@ -1,48 +1,46 @@
 package org.leetcode.levelOrderTraversal;
 
-import java.util.ArrayDeque;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Queue;
+import org.leetcode.binaryTree.TreeNode;
+
+import java.util.*;
 
 public class Solution {
     public List<List<Integer>> levelOrder(TreeNode root) {
         List<List<Integer>> result = new ArrayList<>();
+        if (root == null)
+            return result;
 
-        Queue<TreeNode> queue = new ArrayDeque<>();
+        Deque<TreeNode> queue = new ArrayDeque<>();
         queue.add(root);
 
-        while (! queue.isEmpty()){
+        while (!queue.isEmpty()) {
             int levelSize = queue.size();
             List<Integer> levelValues = new ArrayList<>();
 
-            for(int i=0;i<levelSize;i++){
-                TreeNode node = queue.poll();
+            for (int i = 0; i < levelSize; i++) {
+                TreeNode node = queue.pop();
                 levelValues.add(node.val);
 
-                if(node.left != null) {
-                    queue.add(node);
+                if (node.left != null) {
+                    queue.add(node.left);
                 }
-                if(node.right != null) {
-                    queue.add(node);
+                if (node.right != null) {
+                    queue.add(node.right);
                 }
             }
+
             result.add(levelValues);
         }
 
-    return result;
+        return result;
     }
 
-    public static void main(String[] args){
-        TreeNode fifteen = new TreeNode(15);
-        TreeNode seven = new TreeNode(7);
-        TreeNode nine = new TreeNode(9);
-        TreeNode twenty = new TreeNode(20);
+    public static void main(String[] args) {
         TreeNode root = new TreeNode(3);
-        root.left = nine;
-        root.right = twenty;
-        twenty.left = fifteen;
-        twenty.right = seven;
+        root.left = new TreeNode(9);
+        root.right = new TreeNode(20);
+        root.right.left = new TreeNode(15);
+        root.right.right = new TreeNode(7);
 
         Solution solution = new Solution();
         System.out.println(solution.levelOrder(root));
