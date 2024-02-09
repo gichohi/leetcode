@@ -1,4 +1,4 @@
-import { dailyTemperatures } from "../../src/dailyTemperatures/dailytemperatures";
+import { dailyTemperatures } from "../../src/dailyTemperatures/dailyTemperatures";
 
 describe('testing daily temperatures', () => {
     it('should return an array of numbers', () => {

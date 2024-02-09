@@ -10,7 +10,7 @@ class TreeNode:
 
 class Solution:
 
-    def hhasPathSum(self, root: Optional[TreeNode], targetSum: int) -> bool:
+    def hasPathSum(self, root: Optional[TreeNode], targetSum: int) -> bool:
         if not root:
             return False
 
@@ -27,21 +27,3 @@ class Solution:
 
         # Start DFS from the root with an initial sum of 0
         return dfs(root, 0)
-
-
-# Example usage:
-# Create a binary tree
-root = TreeNode(5)
-root.left = TreeNode(4)
-root.right = TreeNode(8)
-
-root.left.left = TreeNode(11)
-root.left.left.left = TreeNode(7)
-root.left.left.right = TreeNode(2)
-
-root.right.left = TreeNode(13)
-root.right.right = TreeNode(4)
-root.right.right.right = TreeNode(1)
-
-target_sum = 17
-print(Solution().hhasPathSum(root, target_sum))

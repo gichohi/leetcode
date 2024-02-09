@@ -1,7 +1,7 @@
-import { isValid } from "../../src/validParentheses/validparentheses";
+import { isValid } from "../../src/validParentheses/validParentheses";
 
 describe('testing parentheses validity', () => {
-    it('should return an array of numbers', () => {
+    it('should return true for valid parentheses and else false', () => {
         const valid = "{{()}}";
         const invalid = "[}";
         expect(isValid(valid)).toEqual(true);

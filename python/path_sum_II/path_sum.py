@@ -13,21 +13,22 @@ class Solution:
         if root is None:
             return []
 
-        def dfs(node, path):
+        def dfs(node, path, currSum):
             if node is None:
                 return
 
             path.append(node.val)
-            if node.left is None and node.right is None and sum(path) == targetSum:
+            currSum += node.val
+            if node.left is None and node.right is None and currSum == targetSum:
                 result.append(path[:])
 
-            dfs(node.left, path)
-            dfs(node.right, path)
+            dfs(node.left, path, currSum)
+            dfs(node.right, path, currSum)
 
             path.pop()
 
         result = []
-        dfs(root, [])
+        dfs(root, [], 0)
         return result
 
 

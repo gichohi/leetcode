@@ -1,8 +1,8 @@
-package longestPalindrome;
+package longestPalindromeLength;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.leetcode.longestPalindrome.Solution;
+import org.leetcode.longestPalindromeLength.Solution;
 
 public class SolutionTests {
 

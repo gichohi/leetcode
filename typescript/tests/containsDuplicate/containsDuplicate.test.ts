@@ -1,4 +1,4 @@
-import { containsDuplicate } from "../../src/containsDuplicate/containsduplicate";
+import { containsDuplicate } from "../../src/containsDuplicate/containsDuplicate";
 
 describe('testing duplicate', () => {
     it('should true if array contains duplicate and false otherwise', () => {

@@ -1,4 +1,4 @@
-package org.leetcode.longestPalindrome;
+package org.leetcode.longestPalindromeLength;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -24,8 +24,6 @@ public class Solution {
                 longest += count - 1;
             }
         }
-
-        System.out.println(map);
 
         if (s.length() > longest) {
             longest++;
