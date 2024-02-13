@@ -1,6 +1,9 @@
 package main
 
-import "math"
+import (
+	"fmt"
+	"math"
+)
 
 func SortArray(nums []int) []int {
 	return mergeSort(nums)
@@ -8,6 +11,9 @@ func SortArray(nums []int) []int {
 
 func mergeSort(nums []int) []int {
 	length := len(nums)
+	if length == 1 {
+		return nums
+	}
 	mid := int(math.Floor(float64(length / 2)))
 	leftArray := nums[0:mid]
 	rightArray := nums[mid:length]
@@ -23,25 +29,35 @@ func merge(leftArray []int, rightArray []int) []int {
 	right := 0
 	i := 0
 	nums := make([]int, len(leftArray)+len(rightArray))
+
 	for left < len(leftArray) && right < len(rightArray) {
 		if leftArray[left] < rightArray[right] {
 			nums[i] = leftArray[left]
-			left++
+			left += 1
 		} else {
 			nums[i] = rightArray[right]
-			right++
+			right += 1
 		}
-		i++
+		i += 1
 	}
 
 	for left < len(leftArray) {
 		nums[i] = leftArray[left]
-		left++
-		i++
+		left += 1
+		i += 1
 	}
 	for right < len(rightArray) {
 		nums[i] = rightArray[right]
-		right++
-		i++
+		right += 1
+		i += 1
 	}
+
+	return nums
+}
+
+func main() {
+	var nums = []int{11, 7, 2, 8, 1, 5, 15, 17, 3}
+	expected := SortArray(nums)
+	fmt.Println(expected)
+
 }
