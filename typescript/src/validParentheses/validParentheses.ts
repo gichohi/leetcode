@@ -3,30 +3,24 @@ export const isValid = (s: string): boolean => {
     const stack: string[] = [];
     const chars: string[] = s.split('');
 
-    const dict = {
-        "{": "}",
-        "[": "]",
-        "(": ")"
-    }
+    const dict = new Map<string, string>([
+        ["{", "}"],
+        ["[", "]"],
+        ["(", ")"]
+    ]);
+  
+    let mismatched = true;
 
-    for (const ch of chars) {
-        if (dict.hasOwnProperty(ch)) {
-            stack.push(ch);
+    for (let i=0;i<s.length;i++) {
+        if (dict.has(s[i])) {
+            stack.push(s[i]);
         } else {
-            if (stack.length === 0) {
+            const p = stack.pop();
+            if(dict.get(p!) !== s[i]){
                 return false;
-            } else {
-                const lastOpenedBracket = stack.pop();
-                if (dict[lastOpenedBracket] !== ch) {
-                    return false;
-                }
             }
         }
     }
 
-
-    return stack.length === 0;
+    return mismatched && stack.length == 0;
 }
-
-const s = "[)";
-console.log(isValid(s));
