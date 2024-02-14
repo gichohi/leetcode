@@ -1,6 +1,7 @@
 import unittest
 
-from level_traversal.level_traversal import Solution, TreeNode
+from level_traversal.level_traversal import Solution
+from treenode.treenode import TreeNode
 
 
 class TestSolution(unittest.TestCase):

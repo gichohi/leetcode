@@ -1,6 +1,7 @@
 import unittest
 
-from path_sum_II import TreeNode, Solution
+from path_sum_II import Solution
+from treenode.treenode import TreeNode
 
 
 class TestSolution(unittest.TestCase):
