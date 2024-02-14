@@ -1,5 +1,5 @@
 import { maxLevelSum } from "../../src/maxLevelSum/maxLevelSum";
-import { TreeNode } from "../../src/maxLevelSum/TreeNode";
+import { TreeNode } from "../../src/TreeNode";
 
 describe('testing max level sum', () => {
     it('should return 2', () => {
