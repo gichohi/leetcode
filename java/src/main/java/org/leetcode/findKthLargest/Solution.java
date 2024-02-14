@@ -1,5 +1,6 @@
 package org.leetcode.findKthLargest;
 
+import java.util.Objects;
 import java.util.PriorityQueue;
 
 public class Solution {
@@ -12,8 +13,7 @@ public class Solution {
         for(int i=0;i<k-1;i++){
             queue.poll();
         }
-        int kLargest = queue.poll();
-        return kLargest;
+        return Objects.requireNonNull(queue.poll());
     }
 
     public static void main(String[] args){
