@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"math"
 )
 
@@ -53,11 +52,4 @@ func merge(leftArray []int, rightArray []int) []int {
 	}
 
 	return nums
-}
-
-func main() {
-	var nums = []int{11, 7, 2, 8, 1, 5, 15, 17, 3}
-	expected := SortArray(nums)
-	fmt.Println(expected)
-
 }
