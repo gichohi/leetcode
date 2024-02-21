@@ -9,8 +9,6 @@ export const isValid = (s: string): boolean => {
         ["(", ")"]
     ]);
   
-    let mismatched = true;
-
     for (let i=0;i<s.length;i++) {
         if (dict.has(s[i])) {
             stack.push(s[i]);
@@ -22,5 +20,5 @@ export const isValid = (s: string): boolean => {
         }
     }
 
-    return mismatched && stack.length == 0;
+    return stack.length == 0;
 }

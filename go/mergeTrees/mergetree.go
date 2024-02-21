@@ -10,13 +10,12 @@ type TreeNode struct {
 
 func mergeTrees(root1 *TreeNode, root2 *TreeNode) *TreeNode {
 	res := &TreeNode{}
-	if root1 != nil && root2 != nil {
-		res.Val = root1.Val + root2.Val
-	} else if root1 == nil {
-		res.Val = root2.Val
+	if root1 == nil {
+		return root2
 	} else if root2 == nil {
-		res.Val = root1.Val
+		return root1
 	}
+	res = mergeTrees(root1, root2)
 	res.Left = mergeTrees(root1.Left, root2.Left)
 	res.Right = mergeTrees(root1.Left, root2.Left)
 	return res
