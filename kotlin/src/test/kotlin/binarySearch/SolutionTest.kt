@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
 
-class SolutionTest {
+internal class SolutionTest {
     private val solutionTest: Solution = Solution();
 
     @Test
